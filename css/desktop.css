@@ -1,0 +1,374 @@
+/* ==|== primary styles =====================================================
+   Author: Ugo
+   ========================================================================== */
+  
+#head {
+	display: inline;
+	position: fixed;
+	float: left;
+}
+
+#logo {
+	padding: 0 auto;
+	display: inline;
+	vertical-align: middle;
+}
+
+#main {
+	width:100%; 
+	height:100%; 
+}
+
+	#main p {
+		clear: both;
+		margin-bottom: 2px;
+	}
+
+#mask {
+	width:400%; 
+	height:100%;
+	padding-left: 0;
+}
+
+/* Make an estimate for the screen res and try to center whole 
+ * content by adding padding. Javascript will later get correct
+ * center when loaded and assign the correct padding
+ */
+#head, .section, #foot{
+	padding-left: 15%;
+}
+
+.section_list {
+	float: left;
+	width: 25%; /* width of container divided by number of contained: 100% / 4= 25% */
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.section {
+	width: 960px;
+}
+
+h2.section_header {
+	font-size: 8em;
+	float: right;
+}
+
+.project_list {
+	column-count: 2;
+	-moz-column-count: 2;
+	-o-column-count: 2;
+	-webkit-column-count: 2;
+	column-rule: 1px solid #eee;
+    -moz-column-rule: 1px solid #eee;
+	-o-column-rule: 1px solid #eee;
+	-webkit-column-rule: 1px solid #eee;
+	column-gap: 2em;
+	-moz-column-gap: 2em;
+	-o-column-gap: 2em;
+	-webkit-column-gap: 2em;
+}
+
+#contact_info {
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	padding-top: 15px;
+}
+
+#contact_network {
+	margin-bottom: 0px;
+	padding-left: 0px;
+	position: relative; /* Needed so that the child <span> could be position absolute but relative to this*/
+}
+
+/* HACK! The span in the li doesn't extend the width of the li in webkit browsers, I think.
+   In Chrome, the span text falls beneath the image. A fixed width is used to allow the span
+   to extend
+ */
+ /*TODO Fix this phenomena */
+#contact_network li {
+	/*width: 64px;*/ /* Phenomena will no longer be encountered. Styling and arrangement has changed*/
+	float: left;
+	vertical-align: middle;
+}
+
+	#contact_network .break {
+		clear: left;
+	}
+
+.contact_link_img {
+	position: relative;
+	transition: 0.5s;
+	-moz-transition: 0.5s;
+	-o-transition: 0.5s;
+	-webkit-transition: 0.5s;
+}
+
+	.contact_list_item:hover .contact_link_img {
+		transform: perspective(500px) rotateY(40deg);
+		-moz-transform: perspective(500px) rotateY(40deg);
+		-o-transform: perspective(500px) rotateY(40deg);
+		-webkit-transform: perspective(500px) rotateY(40deg);
+	}
+
+.contact_link_text {
+	font-size: 1.2em;
+	width: 0;
+	padding: 0;
+	position: absolute;
+	top: 0px;
+	left: 300px;  
+	display:block;
+	overflow: hidden;
+	transition: 0.5s;
+	-moz-transition: 0.5s;
+	-ms-transition: 0.5s;
+	-o-transition: 0.5s;
+	-webkit-transition: 0.5s;
+}
+
+#contact_network .contact_list_item:hover .contact_link_text {
+	width: auto;
+	padding:0 20px;
+	overflow: visible;
+}
+
+	#contact_network .contact_list_item:hover .contact_link_text {
+		padding: 5px 10px 4px 10px;
+		text-shadow: none;
+		letter-spacing: 0;
+		box-shadow: rgba(0, 0, 0, 0.1) 0 2px 5px;
+		-moz-box-shadow: rgba(0, 0, 0, 0.1) 0 2px 5px;
+		-ms-box-shadow: rgba(0, 0, 0, 0.1) 0 2px 5px;
+		-o-box-shadow: rgba(0, 0, 0, 0.1) 0 2px 5px;
+		-webkit-box-shadow: rgba(0, 0, 0, 0.1) 0 2px 5px;
+	}
+	
+	#contact_network .linkedin:hover .contact_link_text {
+		/*color: #65b7d2;*/
+		background: rgba(101,183,210,0.4);
+	}
+	
+	#contact_network .google:hover .contact_link_text {
+		/*color: #c83e2e;*/
+		background: rgba(200,62,46,0.4);
+	}
+	
+	#contact_network .twitter:hover .contact_link_text {
+		/*color: #45b0e3;*/
+		background: rgba(69,176,227,0.4);
+	}
+	
+	#contact_network .stackoverflow:hover .contact_link_text {
+		/*color: #ff750f;*/
+		background: rgba(255,117,15,0.4);
+	}
+	
+	#contact_network .lastfm:hover .contact_link_text {
+		/*color: #f40909;*/
+		background: rgba(244,9,9,0.4);
+	}
+	
+	#contact_network .facebook:hover .contact_link_text {
+		/*color: #39599f;*/
+		background: rgba(57,89,159,0.4);
+	}
+	
+	#contact_network .email:hover .contact_link_text {
+		/*color: #b1e400;*/
+		background: rgba(177,228,0,0.4);
+	}
+	
+	#contact_network .phone {
+		/*color: #b1e400;*/
+		visibility: hidden;
+	}
+	
+
+#qr_code {
+	vertical-align: bottom;
+	position:relative;
+	float: right;
+}
+
+	#qr_code img{
+		opacity:1;
+		transition: opacity;
+		-moz-transition: opacity;
+		-ms-transition: opacity;
+		-o-transition: opacity;
+		-webkit-transition: opacity;
+		transition-timing-function: ease-out;
+		-moz-transition-timing-function: ease-out;
+		-ms-transition-timing-function: ease-out;
+		-o-transition-timing-function: ease-out;
+		-webkit-transition-timing-function: ease-out;
+		transition-duration: 500ms;
+		-moz-transition-duration: 500ms;
+		-ms-transition-duration: 500ms;
+		-o-transition-duration: 500ms;
+		-webkit-transition-duration: 500ms;
+	}
+
+	#qr_code .img_desc{
+		position: absolute;
+		top: 0;
+		left: 0;
+		background: #000;
+		color: #eee;
+		text-align: center;
+		vertical-align: bottom;
+		height: 100%;
+		opacity: 0;
+		transition: opacity;
+		-moz-transition: opacity;
+		-ms-transition: opacity;
+		-o-transition: opacity;
+		-webkit-transition: opacity;
+		transition-timing-function: ease-out;
+		-moz-transition-timing-function: ease-out;
+		-ms-transition-timing-function: ease-out;
+		-o-transition-timing-function: ease-out;
+		-webkit-transition-timing-function: ease-out;
+		transition-duration: 500ms;
+		-moz-transition-duration: 500ms;
+		-ms-transition-duration: 500ms;
+		-o-transition-duration: 500ms;
+		-webkit-transition-duration: 500ms;
+	}
+
+		#qr_code .img_desc:hover{
+			opacity: .9;
+			transition: opacity;
+			-moz-transition: opacity;
+			-ms-transition: opacity;
+			-o-transition: opacity;
+			-webkit-transition: opacity;
+			transition-timing-function: ease-out;
+			-moz-transition-timing-function: ease-out;
+			-ms-transition-timing-function: ease-out;
+			-o-transition-timing-function: ease-out;
+			-webkit-transition-timing-function: ease-out;
+			transition-duration: 500ms;
+			-moz-transition-duration: 500ms;
+			-ms-transition-duration: 500ms;
+			-o-transition-duration: 500ms;
+			-webkit-transition-duration: 500ms;
+		}
+
+#foot {
+	position: fixed;
+	left: 0px;
+	bottom: 0px;
+	width: 100%;
+	font-size: 0.65em;
+}
+
+/* =============================================================================
+   Base
+   ========================================================================== */
+
+body { 
+	background-attachment: fixed;
+}
+
+/* =============================================================================
+   Custom scroll bar
+   ========================================================================== */
+ 
+::-webkit-scrollbar {
+    height: 12px;
+    overflow: visible;
+    width: 12px;
+    background: #fff;
+}
+::-webkit-scrollbar-button {
+    display: none;
+    height:0;
+    width: 0;
+}
+::-webkit-scrollbar-track {
+    -moz-background-clip: border;
+    -webkit-background-clip: border;
+    background-clip: border-box;
+    border-width: 0 0 0 4px;
+    border: solid transparent;
+}
+::-webkit-scrollbar-track:hover {
+    background-color:rgba(0,0,0,.05);
+    -moz-box-shadow: inset 1px 0 0 rgba(0,0,0,.1);
+    -webkit-box-shadow: inset 1px 0 0 rgba(0,0,0,.1);
+    box-shadow: inset 1px 0 0 rgba(0,0,0,.1);
+}
+::-webkit-scrollbar-track:active {
+    background-color:rgba(0,0,0,.05);
+	box-shadow: inset 1px 0 0 rgba(0,0,0,.14), inset -1px 0 0 rgba(0,0,0,.07);
+    -webkit-box-shadow: inset 1px 0 0 rgba(0,0,0,.14), inset -1px 0 0 rgba(0,0,0,.07);
+}
+::-webkit-scrollbar-track:horizontal {
+    border-width: 4px 0 0;
+}
+::-webkit-scrollbar-track:horizontal:hover {
+	box-shadow: inset 0 1px 0 rgba(0,0,0,.1);
+    -webkit-box-shadow: inset 0 1px 0 rgba(0,0,0,.1);
+}
+::-webkit-scrollbar-track:horizontal:active {
+    -webkit-box-shadow: inset 0 1px 0 rgba(0,0,0,.14), inset 0 -1px 0 rgba(0,0,0,.07);
+    box-shadow: inset 0 1px 0 rgba(0,0,0,.14), inset 0 -1px 0 rgba(0,0,0,.07);
+}
+::-webkit-scrollbar-thumb {
+    -webkit-background-clip: border;
+    background-clip: border-box;
+    background-color: rgba(0,0,0,.2);
+    -webkit-box-shadow: inset 1px 1px 0 rgba(0,0,0,.1),inset 0 -1px 0 rgba(0,0,0,.07);
+    box-shadow: inset 1px 1px 0 rgba(0,0,0,.1),inset 0 -1px 0 rgba(0,0,0,.07);
+    min-height: 28px;
+    padding: 100px 0 0;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color:rgba(0,0,0,.4);
+    -webkit-box-shadow: inset 1px 1px 1px rgba(0,0,0,.25);
+    box-shadow: inset 1px 1px 1px rgba(0,0,0,.25);
+}
+::-webkit-scrollbar-thumb:active {
+    background-color:rgba(0,0,0,0.5);
+    -webkit-box-shadow: inset 1px 1px 3px rgba(0,0,0,0.35);
+    box-shadow: inset 1px 1px 3px rgba(0,0,0,0.35);
+}
+::-webkit-scrollbar-thumb:horizontal {
+    border-width: 6px 1px 1px;
+    -webkit-box-shadow: inset 1px 1px 0 rgba(0,0,0,.1), inset -1px 0 0 rgba(0,0,0,.07);
+    box-shadow: inset 1px 1px 0 rgba(0,0,0,.1), inset -1px 0 0 rgba(0,0,0,.07);
+    padding: 0 0 0 100px;
+}
+::-webkit-scrollbar-corner {
+    background: transparent;
+}
+body::-webkit-scrollbar-track-piece {
+    -webkit-background-clip: border;
+    background-clip: border-box;
+    background-color: #f5f5f5;
+    -webkit-box-shadow: inset 1px 0 0 rgba(0,0,0,.14), inset -1px 0 0 rgba(0,0,0,.07);
+    box-shadow: inset 1px 0 0 rgba(0,0,0,.14), inset -1px 0 0 rgba(0,0,0,.07);
+}
+body::-webkit-scrollbar-track-piece:horizontal {
+    border-width:3px 0 0;
+    -webkit-box-shadow: inset 0 1px 0 rgba(0,0,0,.14), inset 0 -1px 0 rgba(0,0,0,.07);
+    box-shadow: inset 0 1px 0 rgba(0,0,0,.14), inset 0 -1px 0 rgba(0,0,0,.07);
+}
+body::-webkit-scrollbar-thumb {
+    border-width: 1px 1px 1px 5px;
+}
+body::-webkit-scrollbar-thumb:horizontal {
+    border-width: 5px 1px 1px;
+}
+body::-webkit-scrollbar-corner {
+    -webkit-background-clip: border;
+    background-clip: border-box;
+    background-color: #f5f5f5;
+    border-width: 3px 0 0 3px;
+    border: solid #fff;
+    -webkit-box-shadow: inset 1px 1px 0 rgba(0,0,0,.14);
+    box-shadow: inset 1px 1px 0 rgba(0,0,0,.14);
+}
