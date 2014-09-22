@@ -2,8 +2,13 @@
    Author: Ugo
    ========================================================================== */
 
+#main {
+	font-size: 0.8em;
+}
+
 #head_nav_menu li {
 	float: left;
+	font-size: 0.8em;
 }
 
 #logo {
