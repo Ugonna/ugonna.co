@@ -1,7 +1,7 @@
 /* ==|== primary styles =====================================================
    Author: Ugo
    ========================================================================== */
-  
+
 #head {
 	display: inline;
 	position: fixed;
@@ -15,8 +15,8 @@
 }
 
 #main {
-	width:100%; 
-	height:100%; 
+	width:100%;
+	height:100%;
 }
 
 	#main p {
@@ -24,13 +24,23 @@
 		margin-bottom: 2px;
 	}
 
+@media (max-height: 760px) {
+   #main p, #main .project_list {
+      font-size: 0.9em;
+   }
+
+   #head_nav_menu li {
+      font-size: 0.8em;
+   }
+}
+
 #mask {
-	width:400%; 
+	width:400%;
 	height:100%;
 	padding-left: 0;
 }
 
-/* Make an estimate for the screen res and try to center whole 
+/* Make an estimate for the screen res and try to center whole
  * content by adding padding. Javascript will later get correct
  * center when loaded and assign the correct padding
  */
@@ -118,7 +128,7 @@ h2.section_header {
 	padding: 0;
 	position: absolute;
 	top: 0px;
-	left: 300px;  
+	left: 300px;
 	display:block;
 	overflow: hidden;
 	transition: 0.5s;
@@ -144,47 +154,52 @@ h2.section_header {
 		-o-box-shadow: rgba(0, 0, 0, 0.1) 0 2px 5px;
 		-webkit-box-shadow: rgba(0, 0, 0, 0.1) 0 2px 5px;
 	}
-	
+
 	#contact_network .linkedin:hover .contact_link_text {
 		/*color: #65b7d2;*/
 		background: rgba(101,183,210,0.4);
 	}
-	
+
 	#contact_network .google:hover .contact_link_text {
 		/*color: #c83e2e;*/
 		background: rgba(200,62,46,0.4);
 	}
-	
+
 	#contact_network .twitter:hover .contact_link_text {
 		/*color: #45b0e3;*/
 		background: rgba(69,176,227,0.4);
 	}
-	
+
+   #contact_network .github:hover .contact_link_text {
+      /*color: #4183c4;*/
+      background: rgba(65, 131, 196, 0.4);
+   }
+
 	#contact_network .stackoverflow:hover .contact_link_text {
 		/*color: #ff750f;*/
 		background: rgba(255,117,15,0.4);
 	}
-	
+
 	#contact_network .lastfm:hover .contact_link_text {
 		/*color: #f40909;*/
 		background: rgba(244,9,9,0.4);
 	}
-	
+
 	#contact_network .facebook:hover .contact_link_text {
 		/*color: #39599f;*/
 		background: rgba(57,89,159,0.4);
 	}
-	
+
 	#contact_network .email:hover .contact_link_text {
 		/*color: #b1e400;*/
 		background: rgba(177,228,0,0.4);
 	}
-	
+
 	#contact_network .phone {
 		/*color: #b1e400;*/
 		visibility: hidden;
 	}
-	
+
 
 #qr_code {
 	vertical-align: bottom;
@@ -269,14 +284,14 @@ h2.section_header {
    Base
    ========================================================================== */
 
-body { 
+body {
 	background-attachment: fixed;
 }
 
 /* =============================================================================
    Custom scroll bar
    ========================================================================== */
- 
+
 ::-webkit-scrollbar {
     height: 12px;
     overflow: visible;

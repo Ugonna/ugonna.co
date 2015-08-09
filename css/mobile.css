@@ -2,8 +2,17 @@
    Author: Ugo
    ========================================================================== */
 
+body {
+	padding: 0 10px 0 10px;
+}
+
+#main {
+	font-size: 0.8em;
+}
+
 #head_nav_menu li {
 	float: left;
+	font-size: 0.8em;
 }
 
 #logo {
@@ -46,16 +55,16 @@ h2.section_header {
 	#contact_network ul {
 		padding-bottom: 50px;
 	}
-		
+
 		#contact_network ul li a {
 			padding: 0px;
 			margin-bottom: 0px;
 		}
-		
+
 	#contact_network .contact_link_img {
 		margin-bottom: 0px;
 	}
-	
+
 	#contact_network .contact_link_text {
 		padding: 5px 10px 4px 10px;
 		text-shadow: none;
@@ -68,42 +77,47 @@ h2.section_header {
 		-webkit-box-shadow: rgba(0, 0, 0, 0.1) 0 2px 5px;
 		margin-top: 0px;
 	}
-	
+
 	#contact_network .linkedin .contact_link_text {
 		/*color: #65b7d2;*/
 		background: rgba(101,183,210,0.4);
 	}
-	
+
 	#contact_network .google .contact_link_text {
 		/*color: #c83e2e;*/
 		background: rgba(200,62,46,0.4);
 	}
-	
+
 	#contact_network .twitter .contact_link_text {
 		/*color: #45b0e3;*/
 		background: rgba(69,176,227,0.4);
 	}
-	
+
+	#contact_network .github .contact_link_text {
+		/*color: #4183c4;*/
+		background: rgba(65, 131, 196, 0.4);
+	}
+
 	#contact_network .stackoverflow .contact_link_text {
 		/*color: #ff750f;*/
 		background: rgba(255,117,15,0.4);
 	}
-	
+
 	#contact_network .lastfm .contact_link_text {
 		/*color: #f40909;*/
 		background: rgba(244,9,9,0.4);
 	}
-	
+
 	#contact_network .facebook .contact_link_text {
 		/*color: #39599f;*/
 		background: rgba(57,89,159,0.4);
 	}
-	
+
 	#contact_network .email .contact_link_text {
 		/*color: #b1e400;*/
 		background: rgba(177,228,0,0.4);
 	}
-	
+
 	#contact_network .phone .contact_link_text {
 		/*color: #b1e400;*/
 		background: rgba(159,11,83,0.4);
@@ -124,11 +138,11 @@ h2.section_header {
    Base
    ========================================================================== */
 
-body { 
-	line-height: 1.231; 
+body {
+	line-height: 1.231;
 }
 
-html, button, input, select, textarea { 
+html, button, input, select, textarea {
 	font-size: 1.5em;
 }
 
@@ -193,4 +207,3 @@ textarea[contenteditable] {-webkit-appearance: none;}
 
 /* A workaround for S60 3.x and 5.0 devices which do not animated gif images if they have been set as display: none */
 .gifhidden {position: absolute; left: -100%;}
-
