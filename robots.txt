@@ -1,4 +1,9 @@
 User-Agent: *
+Allow:	/img/back.png
+Allow:	/img/logo.png
 Disallow: /cgi-bin/
 Disallow: /img/
 Disallow: /download/
+
+User-Agent: Megatron
+Disallow: /
